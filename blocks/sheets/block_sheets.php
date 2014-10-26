@@ -2,13 +2,12 @@
 
 class block_sheets extends block_base {
     public function init() {
-        $this->title = "Result sheet upload";
+        $this->title = "Upload a result sheet";
     }
     // The PHP tag and the curly bracket for the class definition 
     // will only be closed after there is another function added in the next section.
     
     public function get_content() {
-    global $CFG, $USER, $DB, $OUTPUT, $PAGE, $ENROLMENT;
     
     if (!isloggedin() or isguestuser()) {
       return '';      // Never useful unless you are logged in as real users
@@ -19,9 +18,9 @@ class block_sheets extends block_base {
     }
  
     $this->content         =  new stdClass;
-    $this->content->text   ='Test';
+    $this->content->text   ='<a href="result/"><center>Click here to upload result sheet</center></a>';
     
-
+  
     
     return $this->content;
   }
