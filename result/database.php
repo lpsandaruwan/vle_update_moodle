@@ -17,7 +17,7 @@
       
       public function createTable($tbname){
 	$createTable="CREATE TABLE $tbname(
-	  userid VARCHAR (10) NOT NULL PRIMARY KEY,
+	  userid VARCHAR (20) NOT NULL PRIMARY KEY,
 	  grade VARCHAR (2) NOT NULL
 	  )";
 	$tbQuery=mysqli_query($this->mysqli,$createTable);
@@ -33,5 +33,9 @@
 	$insertValue="INSERT INTO credits(subid, number) VALUES('$subjectid', $number)";
 	if($tbQuery=mysqli_query($this->mysqli, $insertValue)){echo "done!";}
 	else{die(mysqli_error($this->mysqli));}
+      }
+      
+      public function close(){
+	mysqli_close($this->mysqli);
       }
   }

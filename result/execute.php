@@ -35,5 +35,8 @@
     
     //insert the number of credits for the given subject id
     $o->insertCredits($subjectid,intval($credits));
+    unset($objReader);
+    unset($objPHPExcel);
+    return 'done';
   }
   
