@@ -12,7 +12,7 @@
   
   echo $OUTPUT->header();
   
-    $subjectid=$_POST["subjectid"];
+  $subjectid=$_POST["subjectid"];
   $credits=$_POST["credits"];
   $file=$_POST["file"];
   

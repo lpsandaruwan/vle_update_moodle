@@ -16,7 +16,7 @@ class block_gpacal extends block_base {
     if ($this->content !== null) {
       return $this->content;
     }
-    if(($USER->username)=='admin'){
+    if(($USER->username)=='admin'||$USER->username=='manager1'){
     
     
     $this->content         =  new stdClass;
