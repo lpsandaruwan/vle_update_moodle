@@ -1,26 +1,30 @@
 <?php
-  class database{
-    var $username, $host, $pwd, $dbname;
-    
-      public function connectDB($username, $hostname, $passwd, $dbname){
-	$this->username=$username;
-	$this->hostname=$hostname;
-	$this->passwd=$passwd;
-	$this->dbname=$dbname;
+
+	$con=new mysqli("localhost","root","","ugvle_data");
 	
-	$this->mysqli=new mysqli($this->username, $this->hostname, $this->passwd, $this->dbname);
-	
-	if($this->mysqli->connect_error){
-	  die('Error : mysqi:connect_errno').$this->mysqli->conn;
+	if(mysqli_connect_errno()){
+		echo "Database connection failed.";
 	}
+	
+	
+      
+      function dataCheck($table, $userid){
+      $con=mysqli_connect("localhost","root","","ugvle_data");
+	$tbquery="SELECT data FROM '$table' WHERE userid='$userid'";
+	if($data=mysqli_query($con, $tbquery))echo"work";
+	print_r($data);
+	return $data;
       }
-      
-      
+      /**
       public function storeData($table, $userid, $dataType, $data){
 	
       }
       
       public function getData($table, $userid, $dataType){
 	
-      }
-  }
+      }**/
+  
+
+   echo (dataCheck("highlights", "2012cs1"));
+  
+  ?>
