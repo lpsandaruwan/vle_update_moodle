@@ -7,9 +7,9 @@ vle_update_moodle
 
 This update contains following custom made units,
 
-    -/cv
+-/cv
     This module cotains PHP codes to display the logged in student's CV. Half of it, is automatically genarated        using     information in internal database and the other half is for the user to edit. Our goal is to generate     a standard      format for each and every student, that can be compaired by the industries easily.  status: NC
-    - /result
+-/result
     This module contains a excel reader, for course admins of our university to upload result sheet in excel format     and upload them into a separate database as the course admins requested. Also this separate database gives the     ability to students to see their results privately.    status: CB
 
 and contains custom made blocks,
