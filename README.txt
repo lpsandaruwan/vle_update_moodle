@@ -1,12 +1,12 @@
 vle_update_moodle
-=======
+=================
+
 -> CW= completed, working
 -> CB= completed, buggy
 -> CN= completed, not tested
 -> NC= not completed
 
 This update contains following custom made units,
-
 - /cv
 This module cotains PHP codes to display the logged in student's CV. Half of it, is automatically genarated 
 using information in internal database and the other half is for the user to edit. Our goal is to generate a
